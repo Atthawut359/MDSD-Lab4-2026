@@ -2176,6 +2176,7 @@ final GoRouter appRouter = GoRouter(
 
 ```
 
+<img width="1372" height="995" alt="image" src="https://github.com/user-attachments/assets/6690c12b-64eb-4602-bd6a-2b321e63aa9c" />
 
 
 #### ขั้นตอนที่ 5.2 — ตั้งค่า main.dart
