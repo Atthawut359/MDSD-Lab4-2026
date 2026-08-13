@@ -2365,9 +2365,12 @@ GoRoute(
 > 💡 **หลีกเลี่ยงการขอโค้ดทั้งไฟล์จาก AI** ให้ลองเขียนเองก่อน ถ้าติดจริง ๆ ให้ถามเป็นจุด ๆ ไป (เช่น "ทำไม setState ใน Widget อื่นไม่ทำให้ Saved Screen รีเฟรช") จะได้เรียนรู้มากกว่าการคัดลอกมาทั้งหมด
 
 บันทึกรูปผลการทดลอง
-```image
-บันทึกรูปโค้ด และรูปผลการทดลองที่นี่ 
-```
+
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/6e3a6974-5375-477d-a064-edb714421511" />
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/b55a594f-983a-4825-905c-f0a65dac9a2f" />
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/5e337936-1b39-456b-b236-4dc473f9e534" />
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/d0ae239f-cbf3-4ae8-b42d-e96ff36393a7" />
+
 ---
 
 ## 📝 คำถามท้ายใบงาน
