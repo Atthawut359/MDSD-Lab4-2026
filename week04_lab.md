@@ -2271,7 +2271,7 @@ flutter devices
 | 12 | เลื่อนดู Featured List แนวนอนบนหน้า Home (หลังทำ Checkpoint 4.3) | เห็นครบทุก Destination เลื่อนซ้าย-ขวาได้ลื่นไหล | ✅ |
 | 13 | พิมพ์ URL `/explore/destinations/999` ตรง ๆ (หลังทำ Checkpoint 5.1) | แสดงหน้า "ไม่พบข้อมูลที่ต้องการ" ไม่ใช่ Error สีแดง | ✅ |
 | 14 | กด Tab "เกี่ยวกับ" ที่เพิ่มใหม่ (หลังทำ Checkpoint 5.1) | เปลี่ยนไปหน้า AboutScreen ได้ | ✅ |
-| 15 | เทียบค่า `MediaQuery.size.width` กับ `constraints.maxWidth` (ตาม Checkpoint 4.1) | บันทึกค่าที่สังเกตได้และสรุปความแตกต่าง | MediaQuery.of(context).size.width เป็นความกว้างของทั้งหน้าจอ ส่วน constraints.maxWidth เป็นความกว้างที่ widget ได้รับจาก parent หาก widget อยู่ในพื้นที่ที่ถูกจำกัดด้วย padding หรือ container ค่าอาจต่างกัน โดยทั่วไปเมื่อ widget ขยายเต็มหน้าจอทั้งสองค่าเท่ากัน เราควรใช้ MediaQuery สำหรับข้อมูลหน้าจอทั้งหมด และ LayoutBuilder สำหรับ responsive ตามพื้นที่ที่ widget จริง ๆ ได้รับ |
+| 15 | เทียบค่า `MediaQuery.size.width` กับ `constraints.maxWidth` (ตาม Checkpoint 4.1) | บันทึกค่าที่สังเกตได้และสรุปความแตกต่าง | ✅ |
 
 ---
 
