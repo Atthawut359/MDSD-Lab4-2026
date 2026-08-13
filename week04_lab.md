@@ -2394,8 +2394,42 @@ Go Router ใช้ StatefulShellRoute แทน ShellRoute ธรรมดา�
 การส่งข้อมูลผ่าน extra ของ Go Router มีข้อจำกัดสำคัญคือข้อมูลนั้นจะถูกเก็บไว้ในหน่วยความจำชั่วคราวเท่านั้น ทำให้เมื่อผู้ใช้รีเฟรชหน้าเว็บบราว์เซอร์ หรือเข้าถึงแอปพลิเคชันโดยตรงผ่าน Deep Link ข้อมูลในส่วนนี้จะสูญหายและมีค่าเป็น Null ซึ่งอาจทำให้แอปพลิเคชันเกิดข้อผิดพลาดได้ วิธีแก้ไขที่เหมาะสมและเป็นมาตรฐานคือการหลีกเลี่ยงการส่งออบเจกต์ขนาดใหญ่ผ่าน extra แล้วเปลี่ยนไปส่งเฉพาะรหัสอ้างอิงผ่าน Path Parameters หรือ Query Parameters แทน เนื่องจากค่าเหล่านี้จะถูกฝังรวมเป็นส่วนหนึ่งของ URL อย่างถาวร จากนั้นเมื่อหน้าจอปลายทางถูกเปิดขึ้นมา จึงค่อยนำ ID นั้นไปดึงข้อมูลฉบับเต็มจากฐานข้อมูล API หรือ State Management ในระบบอีกครั้ง
 ```
 5. วาด Navigation Hierarchy ของแอปนี้ (สามารถวาดบนกระดาษแล้วถ่ายรูปส่งได้)
-```text
-
+```
+MyApp
+└── MaterialApp.router
+    └── appRouter
+        ├── Root Shell (StatefulShellRoute.indexedStack)
+        │   ├── Tab: Home  -> /
+        │   │   └── HomeScreen
+        │   │       └── tap destination card
+        │   │           └── /destination/:id
+        │   │               └── DestinationDetailScreen
+        │   │
+        │   ├── Tab: Explore -> /explore
+        │   │   └── ExploreScreen
+        │   │       └── tap destination card
+        │   │           └── /destination/:id
+        │   │
+        │   ├── Tab: Saved -> /saved
+        │   │   └── SavedScreen
+        │   │       └── tap saved item
+        │   │           └── /destination/:id
+        │   │
+        │   ├── Tab: Profile -> /profile
+        │   │   └── ProfileScreen
+        │   │       ├── การแจ้งเตือน
+        │   │       ├── ภาษา
+        │   │       ├── เกี่ยวกับแอป
+        │   │       └── ออกจากระบบ
+        │   │           (ตอนนี้ onTap ยังว่าง/ยังไม่มี route)
+        │   │
+        │   └── Tab: About -> /about
+        │       └── AboutScreen
+        │
+        └── Global Detail Route
+            └── /destination/:id
+                ├── ถ้าเจอข้อมูล -> DestinationDetailScreen
+                └── ถ้าไม่เจอ -> _DestinationNotFoundScreen
 ```
 ---
 
